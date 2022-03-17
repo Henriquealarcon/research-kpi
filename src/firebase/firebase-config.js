@@ -3,13 +3,13 @@ import { getAnalytics } from 'firebase/analytics';
 import { getFirestore } from '@firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyBUHVcy5sQuVaMfNPhqrFM96J92jB832qc',
-  authDomain: 'kpiform.firebaseapp.com',
-  projectId: 'kpiform',
-  storageBucket: 'kpiform.appspot.com',
-  messagingSenderId: '1094615800627',
-  appId: '1:1094615800627:web:78944c80ac2d66bb3afc46',
-  measurementId: 'G-8FVHT515G7',
+  apiKey: process.env.REACT_APP_FIREBASE_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_SENDER_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
 };
 
 const app = initializeApp(firebaseConfig);
