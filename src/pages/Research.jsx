@@ -9,6 +9,8 @@ import {
 import { useNavigate } from 'react-router-dom';
 import { db } from '../firebase/firebase-config';
 import Response from '../components/Questions';
+import NavBar from '../components/NavBar';
+import { ButtonResearch } from '../styles/research.styles';
 
 export default function Research() {
   const [questions, setQuestions] = useState([]);
@@ -58,33 +60,36 @@ export default function Research() {
 
   if (!questions.length) return 'loading...';
   return (
-    <form>
-      <Response
-        question={questions[index]}
-        handleChange={handleChange}
-        data={data}
-      />
-      {
+    <>
+      <NavBar />
+      <>
+        <Response
+          question={questions[index]}
+          handleChange={handleChange}
+          data={data}
+        />
+        {
         !index
           ? (
-            <button onClick={() => setIndex(index + 1)} type="button">
+            <ButtonResearch onClick={() => setIndex(index + 1)} type="button">
               Proxima pergunta
-            </button>
+            </ButtonResearch>
           )
           : (
-            <button onClick={() => setIndex(index - 1)} type="button">
+            <ButtonResearch onClick={() => setIndex(index - 1)} type="button">
               Pergunta anterior
-            </button>
+            </ButtonResearch>
           )
       }
-      {
+        {
           Object.keys(data).length === questions.length
           && (
-          <button onClick={handleClick} type="button">
-            Finalizar
-          </button>
+            <ButtonResearch onClick={handleClick} type="button">
+              Finalizar
+            </ButtonResearch>
           )
       }
-    </form>
+      </>
+    </>
   );
 }

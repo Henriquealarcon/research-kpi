@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import Answers from './Answers';
 import { createAnswers } from '../redux/slice/research';
+import { TextResearch } from '../styles/research.styles';
 
 export default function Response({
   question, handleChange, data,
@@ -14,12 +15,12 @@ export default function Response({
   }, []);
 
   return (
-    <div>
-      <h2>
+    <>
+      <TextResearch>
         {question.title}
-      </h2>
+      </TextResearch>
       <Answers handleChange={handleChange} question={question} data={data} />
-    </div>
+    </>
   );
 }
 
