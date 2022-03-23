@@ -26,7 +26,7 @@ export default function Research() {
 
   const updateUser = async () => {
     const dataDoc = doc(db, 'data', 'resultQuestions');
-    const newFields = { id: userId, responses: data };
+    const newFields = { [userId]: data };
     await updateDoc(dataDoc, newFields);
   };
 
