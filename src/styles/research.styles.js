@@ -45,7 +45,7 @@ align-items: center;
 `;
 
 export const TextResearch = styled.h1`
-margin-top: 3em;
+margin-top: 1.5em;
 font-size: 40px;
 text-align: center;
 color: #001427;
@@ -69,10 +69,9 @@ background-color: #001427;
 
 export const ButtonResearch = styled.button`
 border-style: none;
-margin: 6em 2em 20em 5em;
-margin-left: 26em;
-width: 20%;
-height: 40px;
+margin: 1em auto 1em;
+width: 80%;
+height: 50px;
 border-radius: 10px;
 font-size: 14px;
 color: white;

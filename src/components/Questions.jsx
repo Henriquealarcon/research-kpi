@@ -15,12 +15,12 @@ export default function Response({
   }, []);
 
   return (
-    <>
+    <div className="questions">
       <TextResearch>
         {question.title}
       </TextResearch>
       <Answers handleChange={handleChange} question={question} data={data} />
-    </>
+    </div>
   );
 }
 

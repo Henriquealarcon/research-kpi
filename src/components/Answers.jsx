@@ -1,15 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../styles/main.css';
 
 export default function Answers({ question: { answers, id }, handleChange, data }) {
   return (
-    <>
+    <fieldset className="answers">
       {answers.map((answer) => (
         <div
-          align="center"
-          border="1px solid black"
-          box-shadow="0 0 1em #00000099"
-          id="questions"
           key={answer}
         >
           <label htmlFor={id} onChange={handleChange}>
@@ -18,7 +15,7 @@ export default function Answers({ question: { answers, id }, handleChange, data 
           </label>
         </div>
       ))}
-    </>
+    </fieldset>
   );
 }
 
