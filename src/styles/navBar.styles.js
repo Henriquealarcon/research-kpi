@@ -2,10 +2,10 @@ import styled from 'styled-components';
 
 export const NavHeader = styled.header`
 position: fixed;
+background-color: white;
 top:0;
 width: 100%;
 z-index: 1;
-
 `;
 
 export const Image = styled.img`
