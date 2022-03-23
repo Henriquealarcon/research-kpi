@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged } from 'firebase/auth';
+import { TextField } from '@mui/material';
 import { addDoc, collection } from '@firebase/firestore';
 import { useNavigate } from 'react-router-dom';
-import { Button } from '@mui/material';
+import { RegisterContainer, Button } from '../styles/register.styles';
 import { db } from '../firebase/firebase-config';
+import NavBar from '../components/NavBar';
 
 export default function Register() {
   const [newEmail, setNewEmail] = useState('');
@@ -51,76 +53,79 @@ export default function Register() {
       navigate('/login');
       return user;
     } catch (error) {
-      return error.message;
+      return alert('Campos preenchidos incorretamente');
     }
   };
 
   return (
-    <body>
-      <h1>Cadastro</h1>
-      <form id="kpiform">
-        <input
-          name="email"
-          onChange={(event) => setNewEmail(event.target.value)}
-          type="text"
-          placeholder="Insira seu e-mail"
-        />
-        <input
-          name="password"
-          onChange={(event) => setNewPassword(event.target.value)}
-          type="password"
-          placeholder="Insira sua senha"
-        />
-        <input
-          name="name"
-          onChange={(event) => setNewName(event.target.value)}
-          type="text"
-          placeholder="Insira seu nome"
-        />
-        <input
-          name="age"
-          onChange={(event) => setNewAge(event.target.value)}
-          type="text"
-          placeholder="Insira sua idade"
-        />
-        <select
-          id="genderLabel"
-          onChange={genderSelect}
-        >
-          <option
-            value="Homem cis"
+    <>
+      <NavBar />
+      <RegisterContainer>
+        <h1>Cadastro</h1>
+        <form id="kpiform">
+          <TextField
+            name="email"
+            onChange={(event) => setNewEmail(event.target.value)}
+            type="text"
+            placeholder="Insira seu e-mail"
+          />
+          <TextField
+            name="password"
+            onChange={(event) => setNewPassword(event.target.value)}
+            type="password"
+            placeholder="Insira sua senha"
+          />
+          <TextField
+            name="name"
+            onChange={(event) => setNewName(event.target.value)}
+            type="text"
+            placeholder="Insira seu nome"
+          />
+          <TextField
+            name="age"
+            onChange={(event) => setNewAge(event.target.value)}
+            type="text"
+            placeholder="Insira sua idade"
+          />
+          <select
+            id="genderLabel"
+            onChange={genderSelect}
           >
-            Homem cis
-          </option>
-          <option
-            value="Homem trans"
+            <option
+              value="Homem cis"
+            >
+              Homem cis
+            </option>
+            <option
+              value="Homem trans"
+            >
+              Homem trans
+            </option>
+            <option
+              value="Mulher cis"
+            >
+              Mulher cis
+            </option>
+            <option
+              value="Mulher trans"
+            >
+              Mulher trans
+            </option>
+            <option
+              value="Nao binario"
+              selected
+            >
+              Não binário
+            </option>
+          </select>
+          <Button
+            type="button"
+            onClick={register}
           >
-            Homem trans
-          </option>
-          <option
-            value="Mulher cis"
-          >
-            Mulher cis
-          </option>
-          <option
-            value="Mulher trans"
-          >
-            Mulher trans
-          </option>
-          <option
-            value="Nao binario"
-            selected
-          >
-            Nao binario
-          </option>
-        </select>
-        <Button
-          type="button"
-          onClick={register}
-        >
-          Cadastrar
-        </Button>
-      </form>
-    </body>
+            Cadastrar
+          </Button>
+        </form>
+      </RegisterContainer>
+    </>
   );
 }
