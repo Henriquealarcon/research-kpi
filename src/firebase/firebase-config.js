@@ -1,19 +1,18 @@
 import { initializeApp } from 'firebase/app';
-import { getAnalytics } from 'firebase/analytics';
 import { getFirestore } from '@firebase/firestore';
+import { getAuth } from 'firebase/auth';
 
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_FIREBASE_KEY,
-  authDomain: process.env.REACT_APP_FIREBASE_DOMAIN,
-  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_FIREBASE_SENDER_ID,
-  appId: process.env.REACT_APP_FIREBASE_SENDER_APP_ID,
-  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
+  apiKey: 'AIzaSyDNQkli_eNdn5t3XYZEdUXhLbbjewkrJ0k',
+  authDomain: 'kpi-project-4cfb8.firebaseapp.com',
+  projectId: 'kpi-project-4cfb8',
+  storageBucket: 'kpi-project-4cfb8.appspot.com',
+  messagingSenderId: '1005815764260',
+  appId: '1:1005815764260:web:87ee5b7a6834e58cbb8fb1',
 };
 
 const app = initializeApp(firebaseConfig);
 
-export const analytics = getAnalytics(app);
-
 export const db = getFirestore(app);
+
+export const auth = getAuth(app);
