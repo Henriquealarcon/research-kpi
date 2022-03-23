@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const LoginContainer = styled.div`
 border: 1px solid black;
 box-shadow: 0 0 1em #00000099;
+background-color: rgba(255, 255, 255, 0.3);
 width: 400px;
 height: 400px;
 position: absolute;
@@ -13,9 +14,6 @@ display: flex;
 flex-direction: column;
 justify-content: space-evenly;
 align-items: center;
-   p {
-     color: red;
-   }
 `;
 
 export const TextLogin = styled.h1`
