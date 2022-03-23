@@ -1,6 +1,14 @@
 import styled from 'styled-components';
 
+export const BodyHome = styled.body`
+background-image: url('./background.jpg');
+background-size: cover;
+width: 100%;
+height: 100%;
+`;
+
 export const TitleHome = styled.h1`
+padding: 20px;
 margin-top:50px;
 font-size: 40px;
 color: black;
