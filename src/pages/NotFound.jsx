@@ -1,8 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { ButtonNotFound, TextNotFound } from '../styles/notFound.styles';
 
 export default function NotFound() {
   return (
-    <h1>Pagina nao encontrada</h1>
-
+    <div>
+      <TextNotFound>PÁGINA NÃO ENCONTRDA</TextNotFound>
+      <Link to="/login">
+        <ButtonNotFound type="button">
+          Voltar
+        </ButtonNotFound>
+      </Link>
+    </div>
   );
 }
