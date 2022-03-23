@@ -9,19 +9,19 @@ Projeto em React e Firebase de questionário de empresa com acesso a relatório 
 # Ferramentas de desenvolvimento
 
 <div>
-<img src="https://img.shields.io/badge/Node v16.14.0-339933?style=for-the-badge&logo=node&color=darkblue&logoColor=white" /> https://docs.npmjs.com/
+<img src="https://img.shields.io/badge/Node v16.14.0-339933?style=for-the-badge&logo=node&color=darkblue&logoColor=white" /> 
   <br>
-<img src="https://img.shields.io/badge/React.js-339933?style=for-the-badge&logo=react&color=darkblue&logoColor=white" /> https://pt-br.reactjs.org/docs/getting-started.html
+<img src="https://img.shields.io/badge/React.js-339933?style=for-the-badge&logo=react&color=darkblue&logoColor=white" /> 
   <br>
-<img src="https://img.shields.io/badge/Redux-339933?style=for-the-badge&logo=redux&color=darkblue&logoColor=white" /> https://redux.js.org/
+<img src="https://img.shields.io/badge/Redux-339933?style=for-the-badge&logo=redux&color=darkblue&logoColor=white" /> 
   <br>
 <a href="https://styled-components.com/docs">
   <img src="https://img.shields.io/badge/StyledComponents-339933?style=for-the-badge&logo=styledcomponents&color=darkblue&logoColor=white" />
 </a>
 <br>
-<img src="https://img.shields.io/badge/Firebase-339933?style=for-the-badge&logo=postman&color=darkblue&logoColor=white" /> https://learning.postman.com/docs/publishing-your-api/documenting-your-api/
+<img src="https://img.shields.io/badge/Firebase-339933?style=for-the-badge&logo=postman&color=darkblue&logoColor=white" /> 
   <br>
-<img src="https://img.shields.io/badge/Eslint-339933?style=for-the-badge&logo=eslint&color=darkblue&logoColor=white" /> https://eslint.org/docs/user-guide/configuring/
+<img src="https://img.shields.io/badge/Eslint-339933?style=for-the-badge&logo=eslint&color=darkblue&logoColor=white" />
   <br>
 </div>
 <br><br>
