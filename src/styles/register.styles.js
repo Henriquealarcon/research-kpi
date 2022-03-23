@@ -2,7 +2,10 @@ import styled from 'styled-components';
 
 export const RegisterContainer = styled.div`
 border: 1px solid black;
+padding: 20px;
+gap: 10px;
 box-shadow: 0 0 1em #00000099;
+background-color: rgba(255, 255, 255, 0.3);
 width: 500px;
 height: 500px;
 position: absolute;
@@ -13,9 +16,7 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-   p {
-     color: red;
-   }
+
 `;
 
 export const TextRegister = styled.h1`
@@ -24,23 +25,10 @@ text-align: center;
 color: #001427;
 `;
 
-export const Selects = styled.option`
-  display:flex;
-  flex-direction: column;
-  width: 60%;
-  height: 50px;
-  padding: 3px;
-  color: black;
-  background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  font-size: 20px;
-`;
-
 export const Button = styled.button`
 border-style: none;
 margin: 2em 3em 2em;
-width: 80%;
+width: 50%;
 height: 50px;
 border-radius: 10px;
 font-size: 15px;

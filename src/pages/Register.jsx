@@ -3,16 +3,17 @@ import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged } from 'fir
 import { TextField } from '@mui/material';
 import { addDoc, collection } from '@firebase/firestore';
 import { useNavigate } from 'react-router-dom';
-import { RegisterContainer, Button } from '../styles/register.styles';
+import { RegisterContainer, Button, TextRegister } from '../styles/register.styles';
 import { db } from '../firebase/firebase-config';
 import NavBar from '../components/NavBar';
+import '../styles/main.css';
 
 export default function Register() {
   const [newEmail, setNewEmail] = useState('');
   const [newPassword, setNewPassword] = useState('');
   const [newName, setNewName] = useState('');
   const [newAge, setNewAge] = useState('');
-  const [newGender, setNewGender] = useState('');
+  const [newGender, setNewGender] = useState('Não binário');
   const [userId, setUserId] = useState('');
   const navigate = useNavigate();
   const auth = getAuth();
@@ -60,9 +61,12 @@ export default function Register() {
   return (
     <>
       <NavBar />
-      <RegisterContainer>
-        <h1>Cadastro</h1>
-        <form id="kpiform">
+      <body
+        className="home"
+      >
+        <RegisterContainer>
+          <TextRegister>Cadastro</TextRegister>
+          {/* <form id="kpiform"> */}
           <TextField
             name="email"
             onChange={(event) => setNewEmail(event.target.value)}
@@ -92,27 +96,32 @@ export default function Register() {
             onChange={genderSelect}
           >
             <option
+              className="select-item"
               value="Homem cis"
             >
               Homem cis
             </option>
             <option
+              className="select-item"
               value="Homem trans"
             >
               Homem trans
             </option>
             <option
+              className="select-item"
               value="Mulher cis"
             >
               Mulher cis
             </option>
             <option
+              className="select-item"
               value="Mulher trans"
             >
               Mulher trans
             </option>
             <option
-              value="Nao binario"
+              className="select-item"
+              value="Não binário"
               selected
             >
               Não binário
@@ -124,8 +133,9 @@ export default function Register() {
           >
             Cadastrar
           </Button>
-        </form>
-      </RegisterContainer>
+          {/* </form> */}
+        </RegisterContainer>
+      </body>
     </>
   );
 }
