@@ -18,6 +18,7 @@ Projeto em React e Firebase de questionário de empresa com acesso a relatório 
 <a href="https://styled-components.com/docs">
   <img src="https://img.shields.io/badge/StyledComponents-339933?style=for-the-badge&logo=styledcomponents&color=darkblue&logoColor=white" />
 </a>
+<br>
 <img src="https://img.shields.io/badge/Firebase-339933?style=for-the-badge&logo=postman&color=darkblue&logoColor=white" /> https://learning.postman.com/docs/publishing-your-api/documenting-your-api/
   <br>
 <img src="https://img.shields.io/badge/Eslint-339933?style=for-the-badge&logo=eslint&color=darkblue&logoColor=white" /> https://eslint.org/docs/user-guide/configuring/
@@ -39,7 +40,7 @@ OBS: A aplicação está deployada no seguinte, caso preferência. https://henri
 
 ```bash
 # Clone este repositório com a chave SSH ou HTTP a depender de como seu git está configurado.
-$ git clone <git@github.com:Henriquealarcon/delivery-app.git>
+$ git clone <git@github.com:Henriquealarcon/research-kpi.git>
 
 # Instale as dependências do back-end
 $ npm install
