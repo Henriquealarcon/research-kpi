@@ -32,6 +32,8 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 Como o projeto possui dependências na raíz, no back e no front é necessário rodar o **npm install**, conforme a seguir:
 
+OBS: A aplicação está deployada no seguinte, caso preferência. https://henriquealarcon.github.io/research-kpi/register
+
 ```
 ## Rodando o Front End 
 
