@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import { Button, TextField } from '@mui/material/';
+import {
+  TextField, FormControl,
+} from '@mui/material/';
 import { auth } from '../firebase/firebase-config';
-import { LoginDiv } from '../styles/styles';
+import { LoginContainer, Button, TextLogin } from '../styles/login.styles';
+import Navbar from '../components/NavBar';
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -20,10 +23,19 @@ export default function Login() {
   };
 
   return (
-    <LoginDiv>
-      <body>
-        <h1>Login</h1>
-        <form id="kpiform">
+    <>
+      <Navbar />
+      <LoginContainer
+        container
+        justifyContent="space-evenly"
+        alignItems="center"
+        display="flex"
+        spacing={1}
+        margin="auto"
+      >
+        {' '}
+        <FormControl id="kpiform" align="center">
+          <TextLogin>Login</TextLogin>
           <TextField
             name="email"
             variant="outlined"
@@ -39,8 +51,8 @@ export default function Login() {
             placeholder="Insira sua senha"
           />
           <Button
-            variant="contained"
             type="button"
+            variant="contained"
             onClick={login}
           >
             Entrar
@@ -54,8 +66,8 @@ export default function Login() {
               Cadastrar
             </Button>
           </Link>
-        </form>
-      </body>
-    </LoginDiv>
+        </FormControl>
+      </LoginContainer>
+    </>
   );
 }
