@@ -13,8 +13,6 @@ Projeto em React e Firebase de questionário de empresa com acesso a relatório 
   <br>
 <img src="https://img.shields.io/badge/React.js-339933?style=for-the-badge&logo=react&color=darkblue&logoColor=white" /> 
   <br>
-<img src="https://img.shields.io/badge/Redux-339933?style=for-the-badge&logo=redux&color=darkblue&logoColor=white" /> 
-  <br>
 <a href="https://styled-components.com/docs">
   <img src="https://img.shields.io/badge/StyledComponents-339933?style=for-the-badge&logo=styledcomponents&color=darkblue&logoColor=white" />
 </a>
