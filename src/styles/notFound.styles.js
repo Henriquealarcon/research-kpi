@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const TextNotFound = styled.h1`
+margin-top: 1em;
 font-size: 50px;
 text-align: center;
 color: #001427;

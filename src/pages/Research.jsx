@@ -70,18 +70,19 @@ export default function Research() {
         />
         <div className="buttonContainer">
           {
-        !index
-          ? (
-            <button onClick={() => setIndex(index + 1)} type="button" className="buttons">
-              Proxima pergunta
-            </button>
-          )
-          : (
-            <button onClick={() => setIndex(index - 1)} type="button" className="buttons">
-              Pergunta anterior
-            </button>
-          )
-      }
+            !!index && (
+              <button onClick={() => setIndex(index - 1)} type="button" className="buttons">
+                Pergunta anterior
+              </button>
+            )
+          }
+          {
+           index !== questions.length - 1 && (
+           <button onClick={() => setIndex(index + 1)} type="button" className="buttons">
+             Proxima pergunta
+           </button>
+           )
+          }
           {
           Object.keys(data).length === questions.length
           && (

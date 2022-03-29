@@ -16,21 +16,20 @@ export default function Result() {
   useEffect(() => {
     const getData = async () => {
       const newData = await getDocs(dataCollection);
-      return setQuestion(newData.docs.map((docs) => ({ ...docs.data(), id: docs.id }))[0]);
+      return setQuestion(newData.docs.map((docs) => ({ ...docs.data() }))[0]);
     };
     getData();
   }, []);
 
   if (question && !data1.length && !data2.length) {
     const chartKeys = Object.keys(question);
-    chartKeys.pop();
 
     const idQuestion1 = 'LNF4wCmhSCVQRezGypj6';
 
     const idQuestion2 = 'ZotBth1vccQXDD9aoAfB';
 
     const customChart1 = {
-      '1 a 3': 0,
+      '0 a 3': 0,
       '4 a 6': 0,
       '7 a 10': 0,
       'Mais que 10': 0,
